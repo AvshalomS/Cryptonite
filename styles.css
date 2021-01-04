@@ -1,0 +1,9 @@
+.rigthToLeft {
+  direction: rtl;
+}
+.textRight {
+  text-align: right;
+}
+.cardBackground {
+  background-color: #81d4fa;
+}

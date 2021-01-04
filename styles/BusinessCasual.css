@@ -1,0 +1,73 @@
+/*!
+ * Start Bootstrap - Business Casual v5.0.6 (https://startbootstrap.com/template-overviews/business-casual)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-casual/blob/master/LICENSE)
+ */
+
+body {
+  font-family: "Lora";
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(47, 23, 15, 0.65))
+  );
+  background: linear-gradient(rgba(47, 23, 15, 0.65));
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway";
+}
+
+p {
+  line-height: 1.75;
+}
+
+.section-heading {
+  text-transform: uppercase;
+}
+
+.section-heading .section-heading-upper {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.section-heading .section-heading-lower {
+  display: block;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.bg-faded {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.btn {
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
+  box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
+}
+
+.btn-primary {
+  background-color: #03a9f4;
+  border-color: #ffeb3b;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #03a9f4;
+  border-color: #ffeb3b;
+}
+
+.font-weight-light {
+  font-weight: 100 !important;
+}

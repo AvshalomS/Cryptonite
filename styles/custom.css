@@ -1,0 +1,120 @@
+/* Parallax Scrolling -------------------------------------------------------------------------------- */
+body,
+html {
+  height: 100%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../images/background-cluster-color-1410140.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+/* @media only screen and (max-device-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+  } */
+
+/* Jumbotron CSS ----------------------------------------------------------------------------------- */
+#jumbotron {
+  padding: 10px;
+  opacity: 0.7;
+}
+h1 {
+  opacity: 1;
+}
+
+/* Cards CSS ---------------------------------------------------------------------------------------- */
+
+.card {
+  /* The image used */
+  background-image: url("../images/cardBackground/background-blank-empty-62693.jpg");
+  width: 100%;
+  margin: 5%;
+  opacity: 0.9;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.custom-switch {
+  display: inline;
+  position: absolute;
+  right: 5%;
+}
+
+.card-title {
+  display: inline;
+}
+
+/* .card-header {
+} */
+
+.card-body {
+  /* height: 0px; */
+  overflow: scroll;
+  font-family: "Times New Roman", Times, serif;
+  /* text-align: center; */
+}
+
+.card-footer {
+  /* height: 0px; */
+  font-family: "Times New Roman", Times, serif;
+
+  /* Full Responsive Font */
+  font-size: 1.2vw;
+  overflow: scroll;
+
+  padding: 5px;
+}
+
+/* Show the Buy/Sell buttons only when the user hovers over it -------------------------------------------- */
+.btnBuy {
+  display: none;
+  background-color: Transparent;
+  border: none;
+  float: left;
+}
+
+.btnSell {
+  display: none;
+  background-color: Transparent;
+  border: none;
+  float: right;
+}
+
+/* .card:hover button {
+  display: block;
+} */
+
+/* Progress bar */
+#wait {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+#wait img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#liveReportsContainer,
+#aboutContainer {
+  padding: 25px;
+}
+/* End ------------------------------------------------------------------------------------------------ */
