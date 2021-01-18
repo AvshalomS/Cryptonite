@@ -17,19 +17,19 @@
     <!-- Custom javaScript -->
     <script src="scripts/custom.js"></script>
 
-    <title>Cryptonite</title>
+    <title class="title textDirection">Cryptonite</title>
 
 </head>
 
-<body class="parallax">
+<body class="parallax" onload="initLanguage()">
 
     <!-- Jumbotron -->
     <div class="container" id="jumbotron">
 
         <div class="jumbotron text-left">
 
-            <p class="text-center">Shahar Avshlom</p>
-            <h1>Cryptonite</h1>
+            <p class="text-center" id="projectCreator">Shahar Avshlom</p>
+            <h1 class="title textDirection">Cryptonite</h1>
 
         </div>
     </div>
@@ -45,13 +45,18 @@
             <div class="navbar-nav">
                 <a href="#" class="nav-item nav-link" id="home">Home</a>
                 <a href="#" class="nav-item nav-link" id="liveReports">Live Reports</a>
-                <a href="#" class="nav-item nav-link" id="about">About</a>
+                <a href="#" class="nav-item nav-link about" id="about">About</a>
             </div>
             <!-- In this line we will make sure the page does not refresh -->
             <form class="form-inline ml-auto" onsubmit="return false">
                 <input type="text" class="form-control mr-sm-2" id="searchInput" placeholder="Search">
-                <!-- <button type="button" class="btn btn-outline-primary" id="btnSearch">Search</button> -->
-                <a href="https://avshaloms.github.io" class="btn btn-outline-primary">Back to Avshalom's projects</a>
+                <a href="https://avshaloms.github.io" class="btn btn-outline-primary mr-sm-2"
+                    id="backToAvshalomsProjects">Back to Avshalom's
+                    projects</a>
+                <select class="custom-select" name="language" id="htmlLanguage" onchange="changeLanguage()">
+                    <option value="English">English</option>
+                    <option value="Hebrew">עברית</option>
+                </select>
             </form>
         </div>
     </nav>
@@ -68,7 +73,7 @@
         <div class="modal-dialog modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitle">Modal title</h5>
+                    <h5 class="modal-title text-center" id="removeCoins" style="width: 100%;">Remove coins</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -79,8 +84,8 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="btnModalCancel">Cancel</button>
+                    <button type="button" class="btn btn-secondary closeBtn" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary cancelBtn" id="btnModalCancel">Cancel</button>
                 </div>
             </div>
         </div>
@@ -95,27 +100,44 @@
 
     <!-- About -->
     <div class="container" id="aboutContainer">
-        <div class="row">
+        <div class="row textDirection">
             <div class="col-xl-9 col-lg-10 mx-auto">
                 <div class="bg-faded rounded p-5">
                     <img class="img-fluid rounded-circle rounded mx-auto d-block img-thumbnail"
                         src="images/backgroundWait/boulder-daylight-landscape-128328.jpg" alt="Chania" width="460"
                         height="345">
                     <h2 class="section-heading mb-4">
-                        <span class="section-heading-lower">About</span>
-                        <span class="section-heading-upper">Cryptonite project, Shahar Avshalom</span>
+                        <span class="section-heading-lower about">About the project</span>
+                        <span class="section-heading-upper" id="cryptoniteTitle">Cryptonite - JQuery-AJAX RESTful API,
+                            Shahar
+                            Avshalom</span>
                     </h2>
 
-                    <p class="mb-0">The purpose of the project is to make <em>information accessible</em> from
-                        the world
-                        of <em>virtual trade.</em>
-                        <br>The <em>Home screen</em> contains information cards about the coins.
-                        <br>Clicking the <em>chart button</em> will add the coin to the <em>Live Reports</em>
-                        charts,
-                        <em>(You can select up to 5 coins)</em>.
-                        <br>The <em>Live Report</em> screen contains a graph of the selected coins.
-                    </p>
-
+                    <ul>
+                        <li id="cryptoniteLine1">The goal of the project is to <em>access information</em> from the
+                            world of
+                            <em>virtual commerce </em>(Bitcoin etc).</li>
+                        <li id="cryptoniteLine2"><b><em>The home page</em></b> contains information cards about virtual
+                            currencies
+                            <small>(clicking <b>"More info"</b> will make a new call for information from the server,
+                                only if more
+                                than two minutes have passed since the last call)</small>.</li>
+                        <li id="cryptoniteLine3"><b>Clicking the <em>"Chart button"</em></b> will add the currency to
+                            real-time
+                            reports, <small>(up to 5 currencies can be selected)</small>.</li>
+                        <li id="cryptoniteLine4"><b>The <em>"Live Report screen" </em></b> contains a graph of real-time
+                            selected
+                            currency rates.</li>
+                    </ul>
+                    <!-- <h6 class="technologies">Technologies</h6>
+                    <ul>
+                        <li id="cryptoniteLine5">HTML5, CSS3, Bootstrap, Parallax scrolling, Collapser, progress bar.
+                        </li>
+                        <li id="cryptoniteLine6">Dynamic page layouts, <b>S</b>ingle <b>P</b>age <b>A</b>pplication
+                            foundations.
+                        </li>
+                        <li id="cryptoniteLine7">JavaScript, jQuery, Ajax (RESTful API), Callbacks, JSON.</li>
+                    </ul> -->
                 </div>
             </div>
         </div>
